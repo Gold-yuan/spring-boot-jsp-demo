@@ -76,7 +76,7 @@ public class CityRepositoryTest {
 	 */
 	@Test
 	public void upload() throws Exception {
-		Resource resource = new FileSystemResource("C:\\Users\\IBM_ADMIN\\Desktop\\temp\\aaaaaaaaaaa.java");
+		Resource resource = new FileSystemResource("aaaaaaaaaaa.java");
 		MultiValueMap<String, Object> multiValueMap = new LinkedMultiValueMap<String, Object>();
 		multiValueMap.add("username", "admin");
 		multiValueMap.add("files", resource);
@@ -97,7 +97,7 @@ public class CityRepositoryTest {
 		System.out.println(response);
 		System.out.println(response.getStatusCode());
 		if (response.getStatusCode() == HttpStatus.OK) {
-			File f = new File("C:\\Users\\IBM_ADMIN\\Desktop\\temp\\aaaaaaaaaaa.java");
+			File f = new File("aaaaaaaaaaa.java");
 			byte[] file = response.getBody();
 			FileOutputStream fos = new FileOutputStream(f);
 			fos.write(file);

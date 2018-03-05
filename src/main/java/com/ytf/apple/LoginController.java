@@ -60,7 +60,7 @@ public class LoginController {
 	@ResponseBody
 	@RequestMapping(value = "/download")
 	public byte[] download(String name) {
-		File file = new File("C:\\Users\\IBM_ADMIN\\Desktop\\temp\\old.java");
+		File file = new File("old.java");
 		try {
 			byte[] by = new byte[(int) file.length()];
 			try {
